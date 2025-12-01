@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Job Tracker Saver",
+    "version": "1.0.0",
+    "description": "Save job postings from LinkedIn, Indeed, etc. to your Job Tracker.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": [
+      "http://localhost:8000/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Job Tracker Saver"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.linkedin.com/jobs/*",
+          "https://*.indeed.com/*",
+          "https://*.ziprecruiter.com/*",
+          "https://*.glassdoor.com/*"
+        ],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  

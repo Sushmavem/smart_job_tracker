@@ -1,0 +1,12 @@
+{
+    "python.defaultInterpreterPath": "/Users/sushmareddy/Documents/Projects/job-tracker/server/venv/bin/python",
+    "python.analysis.extraPaths": [
+        "/Users/sushmareddy/Documents/Projects/job-tracker/server/venv/lib/python3.11/site-packages",
+        "/Users/sushmareddy/Documents/Projects/job-tracker/server"
+    ],
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+    "git.ignoreLimitWarning": true
+  }
+  

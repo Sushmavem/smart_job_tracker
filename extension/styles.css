@@ -1,0 +1,45 @@
+/* extension/styles.css */
+body {
+    margin: 0;
+    padding: 0.5rem;
+    font-family: system-ui, sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+    width: 280px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  input {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: 1px solid #4b5563;
+    background: #020617;
+    color: #e5e7eb;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #1d4ed8;
+  }
+  
+  #auth-status,
+  #save-status {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  
