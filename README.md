@@ -2,6 +2,8 @@
 
 A modern, full-stack job application tracking system with a React frontend, FastAPI backend, and Chrome extension for seamless job saving.
 
+**click here ** : https://sushmavem.github.io/smart_job_tracker/presentation.html
+
 ## Features
 
 ### Core Features
