@@ -2,8 +2,6 @@
 
 A modern, full-stack job application tracking system with a React frontend, FastAPI backend, and Chrome extension for seamless job saving.
 
-![Job Tracker Dashboard](https://via.placeholder.com/800x400?text=Job+Tracker+Dashboard)
-
 ## Features
 
 ### Core Features
