@@ -12,7 +12,9 @@ app = FastAPI(title="Job Tracker API")
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "chrome-extension://*",  # extension can call backend
+    "http://localhost:5174",
+    "http://127.0.0.1:5174",
+    "chrome-extension://gedbkcoepgodcbklfjgcpmcgdagmgofh",  # extension can call backend
 ]
 
 app.add_middleware(
@@ -24,6 +26,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_routes.router)
+
 app.include_router(jobs_routes.router)
 app.include_router(ai_routes.router)
 app.include_router(email_routes.router)

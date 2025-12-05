@@ -3,6 +3,7 @@ uvicorn[standard]
 python-multipart
 pydantic[email]
 passlib[bcrypt]
+argon2-cffi
 python-jose[cryptography]
 motor
 pydantic-settings

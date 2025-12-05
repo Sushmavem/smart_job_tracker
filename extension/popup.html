@@ -1,27 +1,69 @@
 <!-- extension/popup.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Job Tracker Saver</title>
+    <title>Job Tracker</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
-      <h2>Job Tracker</h2>
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>Job Tracker</span>
+        </div>
+      </header>
 
-      <div id="auth-section">
-        <input id="email" type="email" placeholder="Email" />
-        <input id="password" type="password" placeholder="Password" />
-        <button id="login-btn">Login</button>
-        <p id="auth-status"></p>
+      <!-- Auth Section (Login Form) -->
+      <div id="auth-section" class="section">
+        <p class="section-title">Sign in to save jobs</p>
+        <div class="form-group">
+          <input id="email" type="email" placeholder="Email address" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+        </div>
+        <button id="login-btn" class="btn btn-primary">
+          <span>Sign In</span>
+        </button>
+        <p id="auth-status" class="status"></p>
       </div>
 
-      <div id="save-section" style="display:none;">
-        <p id="job-preview">Click "Save current job" to capture this page.</p>
-        <button id="save-job-btn">Save current job</button>
-        <p id="save-status"></p>
+      <!-- Save Section (After Login) -->
+      <div id="save-section" class="section" style="display:none;">
+        <div class="user-info">
+          <span class="user-label">Logged in as:</span>
+          <span id="user-email" class="user-email"></span>
+          <button id="logout-btn" class="btn-link">Logout</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="job-preview" class="job-preview">
+          <p class="preview-hint">Click below to capture the current job posting</p>
+        </div>
+
+        <button id="save-job-btn" class="btn btn-success">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          <span>Save This Job</span>
+        </button>
+
+        <p id="save-status" class="status"></p>
       </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <a href="http://localhost:5173" target="_blank">Open Dashboard</a>
+      </footer>
     </div>
     <script src="popup.js"></script>
   </body>
